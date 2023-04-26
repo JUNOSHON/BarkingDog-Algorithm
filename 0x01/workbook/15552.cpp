@@ -13,8 +13,8 @@ int main()
   cin >> T;
   vector<int> vA(T);
   vector<int> vB(T);
-  fill(vA.begin(), vB.end(), 0);
-  fill(vA.begin(), vB.end(), 0);
+  // fill(vA.begin(), vB.end(), 0);
+  // fill(vA.begin(), vB.end(), 0);
 
   for (int i = 1; i <= T; i++)
   {
