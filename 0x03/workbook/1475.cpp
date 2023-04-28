@@ -16,8 +16,9 @@ int main()
 
   int N;
   int number[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-  int occur[10] = {}; // 다솜이의 방 숫자 번호가 몇 번 들어왔나
+  int occur[10] = {}; // 다솜이의 방 숫자 번호가 몇 번 등장했나
   cin >> N;
+  int max = 0;
 
   while (N != 0)
   {
@@ -25,8 +26,16 @@ int main()
     N /= 10;
   }
 
+  int sixnine = (occur[6] + occur[9] + 1) / 2;
+  occur[6] = sixnine;
+  occur[9] = sixnine;
+
   for (int i = 0; i < 10; i++)
   {
-    cout << occur[i] << ' ';
+    if (occur[max] < occur[i])
+    {
+      max = i;
+    }
   }
+  cout << occur[max] << '\n';
 }
